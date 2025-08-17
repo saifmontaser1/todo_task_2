@@ -1,0 +1,276 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* todo_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-12 08:02+0000\n"
+"PO-Revision-Date: 2025-08-12 08:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "<strong>Assign To:</strong>"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "<strong>Description:</strong>"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "<strong>Due Date:</strong>"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "<strong>Estimated Time:</strong>"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "<strong>Total Time</strong>"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__active
+msgid "Active"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.actions.act_window,name:todo_management.all_tasks_action
+#: model:ir.ui.menu,name:todo_management.all_tasks_menu
+msgid "All Tasks"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.actions.act_window,name:todo_management.assign_tasks_wizard_action
+#: model:ir.actions.server,name:todo_management.assign_to_server_action
+msgid "Assign Tasks"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_assign_tasks__assign_to_id
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__assign_to_id
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_search
+msgid "Assign To"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.assign_task_wizard_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.actions.server,name:todo_management.todo_server_action
+#: model:ir.model.fields.selection,name:todo_management.selection__todo_task__status__closed
+msgid "Closed"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields.selection,name:todo_management.selection__todo_task__status__completed
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_search
+msgid "Completed"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.assign_task_wizard_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_assign_tasks__create_uid
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__create_uid
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_assign_tasks__create_date
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__create_date
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__date
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "Date"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__description
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__description
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "Description"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_assign_tasks__display_name
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__display_name
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__due_date
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_search
+msgid "Due Date"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__estimated_time
+msgid "Estimated Time (hrs)"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_assign_tasks__id
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__id
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__id
+msgid "ID"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields.selection,name:todo_management.selection__todo_task__status__in_progress
+msgid "In Progress"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_search
+msgid "In progress"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__is_late
+msgid "Is Late"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_assign_tasks__write_uid
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__write_uid
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_assign_tasks__write_date
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__write_date
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__line_ids
+msgid "Line"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields.selection,name:todo_management.selection__todo_task__status__new
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_search
+msgid "New"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__ref
+msgid "Ref"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_form_view
+msgid "Set To Completed"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_form_view
+msgid "Set To In Progress"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_form_view
+msgid "Set To New"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_form_view
+msgid "Set To closed"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__status
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_search
+msgid "Status"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_assign_tasks__task_ids
+msgid "Task"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_task__name
+msgid "Task Name"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "Task:"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "Time"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__time
+msgid "Time(hrs)"
+msgstr ""
+
+#. module: todo_management
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_form_view
+#: model_terms:ir.ui.view,arch_db:todo_management.todo_task_report_template
+msgid "Timesheet"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.ui.menu,name:todo_management.to_do_management_menu
+msgid "To-Do"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.actions.report,name:todo_management.todo_report
+msgid "To-Do Report"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.actions.server,name:todo_management.check_due_date_cron_ir_actions_server
+msgid "ToDo:check Due Date"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model.fields,field_description:todo_management.field_todo_line__todo_id
+msgid "Todo"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model,name:todo_management.model_assign_tasks
+msgid "assign.tasks"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model,name:todo_management.model_todo_line
+msgid "todo.line"
+msgstr ""
+
+#. module: todo_management
+#: model:ir.model,name:todo_management.model_todo_task
+msgid "todo.task"
+msgstr ""

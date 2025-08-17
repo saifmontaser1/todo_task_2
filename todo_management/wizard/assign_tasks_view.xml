@@ -1,0 +1,23 @@
+<odoo>
+    <record id="assign_task_wizard_view_form" model="ir.ui.view">
+        <field name="name">Assign Tasks Wizard</field>
+        <field name="model">assign.tasks</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="assign_to_id" required="1"/>
+                </group>
+                <footer>
+                    <button string="Confirm" type="object" name="action_confirm" class="btn-secondary"/>
+                    <button string="Cancel" special="cancel" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="assign_tasks_wizard_action" model="ir.actions.act_window">
+        <field name="name">Assign Tasks</field>
+        <field name="res_model">assign.tasks</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

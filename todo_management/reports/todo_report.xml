@@ -1,0 +1,51 @@
+<odoo>
+    <record id="todo_report" model="ir.actions.report">
+        <field name="name">To-Do Report</field>
+        <field name="model">todo.task</field>
+        <field name="report_type">qweb-html</field>
+        <field name="binding_model_id" ref="model_todo_task"/>
+        <field name="binding_type">report</field>
+        <field name="report_name">todo_management.todo_task_report_template</field>
+        <field name="report_file">todo_management.todo_task_report_template</field>
+    </record>
+
+    <template id="todo_task_report_template">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <div>
+                <h3>Task: <t t-esc="o.name"/></h3>
+                <p><strong>Due Date:</strong> <t t-esc="o.due_date"/></p>
+                <p><strong>Assign To:</strong> <t t-esc="o.assign_to_id.name"/></p>
+                <p><strong>Estimated Time:</strong> <t t-esc="o.estimated_time"/> H</p>
+                <p><strong>Description:</strong> <t t-esc="o.description"/></p>
+
+                <h4 style="text-align: center;">Timesheet</h4>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="o.line_ids" t-as="line" >
+                            <tr>
+                                <td><t t-esc="line.id"/></td>
+                                <td><t t-esc="line.date"/></td>
+                                <td><t t-esc="line.description"/></td>
+                                <td><t t-esc="line.time"/></td>
+                            </tr>
+                        </t>
+                        <tr>
+                            <td colspan="3"><strong>Total Time</strong></td>
+                            <td><t t-esc="sum(line.time for line in o.line_ids)"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+        </t>
+    </template>
+</odoo>
