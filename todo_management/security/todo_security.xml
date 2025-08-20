@@ -16,8 +16,7 @@
         <record id="todo_task_rule_user" model="ir.rule">
             <field name="name">todo_task_rule_user</field>
             <field name="model_id" ref="todo_management.model_todo_task"/>
-            <field name="domain_force">[('assign_to_id', '=', user.partner_id.id)]</field>
+            <field name="domain_force">[('assignee_id', '=', user.partner_id.id)]</field>
             <field name="groups" eval="[(4, ref('todo_management.todo_user_group'))]"/>
-
         </record>
 </odoo>

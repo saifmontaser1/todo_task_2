@@ -2,10 +2,4 @@
     <menuitem id="to_do_management_menu"
               name="To-Do"
     />
-
-    <menuitem id="all_tasks_menu"
-              name="All Tasks"
-              parent="to_do_management_menu"
-              action="all_tasks_action"
-    />
 </odoo>

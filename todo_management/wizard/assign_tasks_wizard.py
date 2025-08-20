@@ -10,4 +10,4 @@ class AssignTasks(models.TransientModel):
         active_ids = self.env.context.get('active_ids')
         if active_ids:
             tasks = self.env['todo.task'].browse(active_ids)
-            tasks.write({'assign_to_id': self.assign_to_id,})
+            tasks.write({'assignee_id': self.assignee_id,})

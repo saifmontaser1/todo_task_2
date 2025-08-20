@@ -10,8 +10,11 @@
         'security/todo_security.xml',
         'security/ir.model.access.csv',
         'data/todo_sequence.xml',
+        'data_file/close_server_action.xml',
+        'data_file/cron.xml',
+        'data_file/wizard_action.xml',
         'views/base_menu.xml',
-        'views/todo_task_view.xml',
+        'views/todo_task_views.xml',
         'reports/todo_report.xml',
         'wizard/assign_tasks_view.xml'
 
