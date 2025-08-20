@@ -9,7 +9,7 @@ class TodoTask(models.Model):
     name = fields.Char(string='Task Name')
     description = fields.Text()
     due_date = fields.Date()
-    assign_to_id = fields.Many2one('res.partner')
+    assignee_id = fields.Many2one('res.partner')
     estimated_time = fields.Integer(string='Estimated Time (hrs)')
     status = fields.Selection(
         [('new','New'),

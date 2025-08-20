@@ -15,7 +15,7 @@
             <div>
                 <h3>Task: <t t-esc="o.name"/></h3>
                 <p><strong>Due Date:</strong> <t t-esc="o.due_date"/></p>
-                <p><strong>Assign To:</strong> <t t-esc="o.assign_to_id.name"/></p>
+                <p><strong>Assign To:</strong> <t t-esc="o.assignee_id.name"/></p>
                 <p><strong>Estimated Time:</strong> <t t-esc="o.estimated_time"/> H</p>
                 <p><strong>Description:</strong> <t t-esc="o.description"/></p>
 

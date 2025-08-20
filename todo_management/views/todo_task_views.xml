@@ -1,17 +1,17 @@
 <odoo>
     <record id="todo_task_list_view" model="ir.ui.view">
-        <field name="name">todo task list</field>
+        <field name="name">todo.task.list.view</field>
         <field name="model">todo.task</field>
         <field name="arch" type="xml">
-            <list decoration-danger="(is_late)">
+            <list decoration-danger="is_late">
                 <field name="name"/>
                 <field name="due_date"/>
-                <field name="assign_to_id"/>
+                <field name="assignee_id"/>
             </list>
         </field>
     </record>
     <record id="todo_task_form_view" model="ir.ui.view">
-        <field name="name">todo task form</field>
+        <field name="name">todo.task.form.view</field>
         <field name="model">todo.task</field>
         <field name="arch" type="xml">
             <form>
@@ -40,7 +40,7 @@
                     <group>
                         <field name="description" readonly="status in ['completed','closed']"/>
                         <field name="due_date" readonly="status in ['completed','closed']"/>
-                        <field name="assign_to_id" readonly="status in ['completed','closed']"/>
+                        <field name="assignee_id" readonly="status in ['completed','closed']"/>
                         <field name="estimated_time" readonly="status in ['completed','closed']"/>
                         <field name="is_late" readonly="1"/>
                     </group>
@@ -59,56 +59,35 @@
             </form>
         </field>
     </record>
-    <record id="todo_search" model="ir.ui.view">
-        <field name="name">todo task search</field>
+    <record id="todo_task_search_view" model="ir.ui.view">
+        <field name="name">todo.task.search.view</field>
         <field name="model">todo.task</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
-                <field name="assign_to_id"/>
+                <field name="assignee_id"/>
 
                 <filter name="is_new" string="New" domain="[('status','=','new')]"/>
                 <filter name="is_in_progress" string="In progress" domain="[('status','=','in_progress')]"/>
                 <filter name="is_completed" string="Completed" domain="[('status','=','completed')]"/>
 
-                <filter name="group_by_assign" string="Assign To" context="{'group_by':'assign_to_id'}"/>
+                <filter name="group_by_assign" string="Assign To" context="{'group_by':'assignee_id'}"/>
                 <filter name="group_by_status" string="Status" context="{'group_by':'status'}"/>
                 <filter name="group_by_due_date" string="Due Date" context="{'group_by':'due_date'}"/>
             </search>
         </field>
     </record>
-    <record id="todo_server_action" model="ir.actions.server">
-        <field name="name">Closed</field>
-        <field name="model_id" ref="model_todo_task"/>
-        <field name="binding_model_id" ref="model_todo_task"/>
-        <field name="state">code</field>
-        <field name="code">
-            action=records.action_closed()
-        </field>
-    </record>
-    <record id="check_due_date_cron" model="ir.cron">
-        <field name="name">ToDo:check Due Date</field>
-        <field name="model_id" ref="model_todo_task"/>
-        <field name="state">code</field>
-        <field name="code">model.check_due_date()</field>
-        <field name="interval_number">1</field>
-        <field name="interval_type">days</field>
-<!--        <field name="numbercall">-1</field>-->
-        <field name="active">True</field>
-    </record>
 
-    <record id="all_tasks_action" model="ir.actions.act_window">
-        <field name="name">All Tasks</field>
+
+    <record id="todo_task_action" model="ir.actions.act_window">
+        <field name="name">ToDo Tasks</field>
         <field name="res_model">todo.task</field>
         <field name="view_mode">list,form</field>
     </record>
-    <record id="assign_to_server_action" model="ir.actions.server">
-        <field name="name">Assign Tasks</field>
-        <field name="model_id" ref="model_todo_task"/>
-        <field name="binding_model_id" ref="model_todo_task"/>
-        <field name="state">code</field>
-        <field name="code">
-            action=records.action_open_assign_tasks_wizard()
-        </field>
-    </record>
+
+    <menuitem id="all_tasks_menu"
+              name="All Tasks"
+              parent="to_do_management_menu"
+              action="todo_task_action"
+    />
 </odoo>
